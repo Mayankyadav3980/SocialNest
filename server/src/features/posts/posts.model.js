@@ -21,13 +21,15 @@ export default class PostModel{
         }
     }
 
-    static getPostByUserId(userId){
-        let post = posts.find(p=> p.userId == userId);
-         if(post){
-            return post;
-        }else{
-            throw new CustomError("Invalid User Id", 400);
-        }
+    static getPostsByUserId(userId){
+        console.log(userId);
+        
+        let postsByAUser = posts.filter(p=> p.userId == userId);
+         if (postsByAUser.length) {
+           return postsByAUser;
+         } else {
+           throw new CustomError("Invalid User Id", 400);
+         }
     }
 
     static createPost(userId, caption, imageUrl){
@@ -67,7 +69,7 @@ const posts = [
         userId: 1,
         caption: 'This is text of first post',
         imageUrl:'abc.png'
-    }
+    },
     {
         id: 2,
         userId: 1,

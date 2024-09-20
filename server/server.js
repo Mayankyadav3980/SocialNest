@@ -1,15 +1,23 @@
 import express from "express";
-import CustomError from "./src/customErrorHandler/errorHandler";
+import CustomError from "./src/customErrorHandler/errorHandler.js";
+import postRouter from "./src/features/posts/posts.routes.js";
+import userRouter from "./src/features/users/user.routes.js";
 
 const app = express();
 const PORT = 3000;
 
-app.get('/posts', (req, res)=>{
-    res.json('These are all your posts');
-});
+app.use(express.urlencoded({extended:true}));
+app.use(express.json());
+
+app.use('/', userRouter);
+app.use('/api/posts', postRouter);
+
+
 
 //application level error handler
 app.use((err, req, res, next)=>{
+    console.log(err);
+    
     if(err instanceof CustomError){
         return res.status(err.statusCode).json(err.message);
     }
