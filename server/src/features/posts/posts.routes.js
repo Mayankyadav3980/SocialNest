@@ -1,5 +1,6 @@
 import { Router } from "express";
 import PostController from "./posts.controller.js";
+import { uploadFile } from "../../middlewares/file-upload.middleware.js";
 
 const postRouter = Router();
 let postController = new PostController();
@@ -14,7 +15,7 @@ postRouter.get('/:postId', postController.getPostByPostId);
 postRouter.get('/', postController.getPostsByUserId);
 
 //Create a new post
-postRouter.post('/', postController.newPost);
+postRouter.post('/', uploadFile.single('imageUrl'), postController.newPost);
 
 //Delete a specific post by id
 postRouter.delete('/:postId', postController.deletePost);

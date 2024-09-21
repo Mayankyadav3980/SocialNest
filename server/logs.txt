@@ -1,0 +1,23 @@
+
+{"level":"info","message":"req url: /api/posts/1 req body: {\"userId\":1,\"caption\":\"this is updated caption of post by userId1\",\"imageUrl\":\"image.png\"}"}
+{"level":"info","message":"req url: /api/posts/all req body: {}"}
+{"level":"info","message":"req url: /api/posts/all req body: {}"}
+{"level":"info","message":"req url: /api/posts/all req body: {}"}
+{"level":"info","message":"req url: /api/posts req body: {}"}
+{"level":"info","message":"req url: /api/posts req body: {}"}
+{"level":"info","message":"req url: /api/posts req body: {\"userId\":1}"}
+{"level":"info","message":"req url: /api/posts req body: {\"userId\":1}"}
+{"level":"info","message":"req url: /api/posts req body: {\"userId\":1}"}
+{"level":"info","message":"req url: /api/posts req body: {\"userId\":1}"}
+{"level":"info","message":"req url: /api/posts req body: {\"userId\":1}"}
+{"level":"info","message":"req url: /api/posts req body: {}"}
+{"level":"info","message":"req url: /api/posts req body: {}"}
+{"level":"info","message":"req url: /api/posts/all req body: {}"}
+{"level":"info","message":"req url: /api/posts req body: {}"}
+{"level":"info","message":"req url: /api/posts req body: {}"}
+{"level":"info","message":"req url: /api/posts req body: {}"}
+{"level":"info","message":"req url: /api/posts/all req body: {}"}
+{"level":"info","message":"req url: /api/posts req body: {}"}
+{"level":"info","message":"req url: /api/posts/all req body: {}"}
+{"level":"info","message":"req url: /api/posts/2 req body: {}"}
+{"level":"info","message":"req url: /api/posts/all req body: {}"}

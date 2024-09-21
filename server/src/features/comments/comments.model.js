@@ -13,7 +13,7 @@ export default class CommentModel {
     if (filteredComments.length != 0) {
       return filteredComments;
     }
-    throw new CustomError("Invalid post Id!");
+    throw new CustomError("No comments yet!", 400);
   }
 
   static addComment(postId, userId, content) {
@@ -25,7 +25,7 @@ export default class CommentModel {
     if (idx != -1) {
       return comments.splice(idx, 1);
     }
-    throw new CustomError("Invalid comments Id");
+    throw new CustomError("Invalid comments Id", 400);
   }
 
   static updateComment(id, userId, postId, content) {
@@ -38,7 +38,7 @@ export default class CommentModel {
         content,
       });
     }
-    throw new CustomError("Invalid Id!");
+    throw new CustomError("Invalid Id!", 404);
   }
 }
 

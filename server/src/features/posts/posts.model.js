@@ -24,12 +24,7 @@ export default class PostModel{
     static getPostsByUserId(userId){
         console.log(userId);
         
-        let postsByAUser = posts.filter(p=> p.userId == userId);
-         if (postsByAUser.length) {
-           return postsByAUser;
-         } else {
-           throw new CustomError("Invalid User Id", 400);
-         }
+        return posts.filter(p=> p.userId == userId);
     }
 
     static createPost(userId, caption, imageUrl){
@@ -72,8 +67,14 @@ const posts = [
     },
     {
         id: 2,
-        userId: 1,
+        userId: 2,
         caption: 'This is text of 2nd post',
+        imageUrl:'abc2.png'
+    },
+    {
+        id: 3,
+        userId: 3,
+        caption: 'This is text of 3rd post',
         imageUrl:'abc2.png'
     }
 ]
