@@ -21,3 +21,13 @@
 {"level":"info","message":"req url: /api/posts/all req body: {}"}
 {"level":"info","message":"req url: /api/posts/2 req body: {}"}
 {"level":"info","message":"req url: /api/posts/all req body: {}"}
+{"level":"info","message":"req url: /styles.css req body: {}"}
+{"level":"info","message":"req url: /main.js req body: {}"}
+{"level":"info","message":"req url: /favicon.ico req body: {}"}
+{"level":"info","message":"req url: /jobs/0 req body: {}"}
+{"level":"info","message":"req url: / req body: {}"}
+{"level":"info","message":"req url: / req body: {}"}
+{"level":"info","message":"req url: /api/posts/all req body: {}"}
+{"level":"info","message":"req url: /api/posts/all req body: {}"}
+{"level":"info","message":"req url: /api/posts/all req body: {}"}
+{"level":"info","message":"req url: / req body: {}"}
