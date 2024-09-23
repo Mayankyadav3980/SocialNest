@@ -1,0 +1,34 @@
+<% if(errorMessage){ %>
+<div class="alert alert-danger" role="alert"><%= errorMessage %></div>
+<% } %>
+
+<div class="row">
+  <div class="col-7 text-center">
+    <img
+      src="https://img.freepik.com/premium-vector/illustration-vector-graphic-cartoon-character-online-registration_516790-1807.jpg"
+      alt=""
+      class="signup-img "
+    />
+  </div>
+  <div class="col mt-5 ">
+    <h1 class="text-center mb-4">Signup</h1>
+    <div class="form-container">
+       <form action="/signup" method="post"></form>
+      <div class="form-group mb-1">
+        <label for="" class="form-label">Name</label>
+        <input type="text" class="form-control" />
+      </div>
+      <div class="form-group mb-1">
+        <label for="" class="form-label">Email</label>
+        <input type="email" class="form-control" />
+      </div>
+      <div class="form-group mb-1">
+        <label for="" class="form-label">Password</label>
+        <input type="password" class="form-control" />
+      </div>
+      <button type="submit" class="btn btn-primary mx-auto mt-4 sbt-btn">Submit</button>
+    </form>
+    </div>
+   
+  </div>
+</div>
