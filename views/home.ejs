@@ -1,8 +1,198 @@
 <div class="feed-container">
-    <div class="card">
-        <div class="card-head">Name</div>
-        <div class="card-body"><img src="https://img.freepik.com/free-vector/privacy-policy-concept-illustration_114360-7853.jpg" alt="" class="feed-img"></div>
-        <p>caption</p>
-        <p>img</p>
+  <div class="feed">
+    <div class="d-flex">
+      <div class="feed-username">
+        <i class="fa-solid fa-user"></i>
+        <span class="">Mayank Yadav</span>
+      </div>
+      <div class="ms-auto">
+        <button
+          type="button"
+          class="update-icon"
+          data-bs-toggle="modal"
+          data-bs-target="#updatePost"
+        >
+          <i class="fa-solid fa-pen-to-square"></i>
+        </button>
+
+        <button class="del-icon">
+          <i class="fa-solid fa-trash del-icon"></i>
+        </button>
+      </div>
     </div>
+    <hr />
+    <p id="caption">This is caption</p>
+
+    <div>
+      <img
+        src="https://img.freepik.com/free-vector/privacy-policy-concept-illustration_114360-7853.jpg"
+        alt=""
+        class="feed-img"
+      />
+    </div>
+
+    <hr />
+    <div class="row text-center">
+      <div class="col">
+        <button class="like-btn"><i class="fa-solid fa-heart"></i> Like</button>
+        <button
+          class="like-btn"
+          data-bs-toggle="modal"
+          data-bs-target="#showLikes"
+        >
+          (all likes)
+        </button>
+      </div>
+      <div class="col">
+        <!-- <button class="like-btn">
+          
+        </button> -->
+        <button
+          class="like-btn"
+          data-bs-toggle="modal"
+          data-bs-target="#showComments"
+        >
+          <i class="fa-solid fa-comment"></i> Comment
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Update Post Modal -->
+<div
+  class="modal fade"
+  id="updatePost"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Update Post</h1>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body p-3">
+        <!-- <h1>outside modal body</h1> -->
+        <form action="/posts" method="post">
+          <!-- <h1>inside form tag</h1> -->
+          <div class="form-group mb-2">
+            <label for="" class="form-label">Caption</label><br />
+            <input type="text" class="form-input" />
+          </div>
+          <div class="form-group mb-2">
+            <label for="" class="form-label">Post Image</label><br />
+            <input type="file" class="form-input" accept="*" />
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary">Update Post</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Close
+        </button>
+        <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--  Show Likes Modal -->
+<div
+  class="modal fade"
+  id="showLikes"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">
+          All Likes on this Post
+        </h1>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body p-3">
+        <div><i class="fa-solid fa-user m-3"></i> <span>User1</span></div>
+        <div><i class="fa-solid fa-user"></i> <span>User2</span></div>
+        <div><i class="fa-solid fa-user"></i> <span>User3</span></div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Close
+        </button>
+        <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--  Show Comments Modal -->
+<div
+  class="modal fade"
+  id="showComments"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">
+          All Comments on this Post
+        </h1>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body p-3">
+        <!-- <h1>outside modal body</h1> -->
+        <div class="comment-box d-flex">
+          <p class="comment-txt">These are comments</p>
+          <div class="ms-auto">
+            <button
+              type="button"
+              class="update-icon"
+              data-bs-toggle="modal"
+              data-bs-target="#"
+            >
+              <i class="fa-solid fa-pen-to-square m-1"></i>
+            </button>
+
+            <button class="del-icon">
+              <i class="fa-solid fa-trash del-icon"></i>
+            </button>
+          </div>
+        </div>
+
+        <p>These are comments</p>
+        <p>These are comments</p>
+        <p>These are comments</p>
+        <hr />
+        <input type="text" placeholder="Add comment" class="comment-txt" />
+        <button class="btn btn-lg btn-primary ms-3">Add</button>
+      </div>
+      <div class="modal-footer">
+        <!-- <button class="btn btn-primary ">Update Post</button> -->
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Close
+        </button>
+        <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+      </div>
+    </div>
+  </div>
 </div>
