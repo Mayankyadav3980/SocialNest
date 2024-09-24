@@ -1,9 +1,13 @@
 <div class="feed-container">
+<% if(posts){ %>
+  <% posts.forEach( post => { %>
+ 
   <div class="feed">
     <div class="d-flex">
       <div class="feed-username">
         <i class="fa-solid fa-user"></i>
-        <span class="">Mayank Yadav</span>
+        <!-- <span class="">Mayank Yadav</span> -->
+        <span class=""><%= post.userName %></span>
       </div>
       <div class="ms-auto">
         <button
@@ -15,18 +19,20 @@
           <i class="fa-solid fa-pen-to-square"></i>
         </button>
 
-        <button class="del-icon">
+        <button class="del-icon" onclick="deletePost('<%=post.id %>', '<%=token %>')">
           <i class="fa-solid fa-trash del-icon"></i>
         </button>
       </div>
     </div>
     <hr />
-    <p id="caption">This is caption</p>
+    <!-- <p id="caption">This is caption</p> -->
+    <p id="caption"><%= post.caption %></p>
 
     <div>
       <img
-        src="https://img.freepik.com/free-vector/privacy-policy-concept-illustration_114360-7853.jpg"
-        alt=""
+
+        src="<%= post.imageUrl %>"
+        alt="postImage"
         class="feed-img"
       />
     </div>
@@ -57,7 +63,7 @@
       </div>
     </div>
   </div>
-</div>
+
 
 <!-- Update Post Modal -->
 <div
@@ -137,6 +143,8 @@
     </div>
   </div>
 </div>
+</div>
+
 
 <!--  Show Comments Modal -->
 <div
@@ -196,3 +204,10 @@
     </div>
   </div>
 </div>
+
+ <% }) %>
+ <% }else{ %>
+  <div class="alert alert-primary text-center" role="alert"><h2>No Post to show, post, token is null</h2></div>
+ <% } %>
+
+ </div>

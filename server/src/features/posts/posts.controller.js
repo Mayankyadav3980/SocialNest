@@ -22,10 +22,10 @@ export default class PostController {
   }
 
   newPost(req, res) {
-    let userId = req.userId;
+    let {userId, userName } = {req};
     let { caption } = req.body;
     let imageUrl = "postImages/" + req.file.filename;
-    PostModel.createPost(userId, caption, imageUrl);
+    PostModel.createPost(userId, userName, caption, imageUrl);
     res.status(201).json("New post created successfully");
   }
 

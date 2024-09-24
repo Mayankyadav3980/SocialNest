@@ -15,6 +15,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
     />
     <link rel="stylesheet" href="/styles.css" />
+    
   </head>
   <body>
     <nav class="navbar navbar-expand-lg mb-3 px-5 cnc">
@@ -36,12 +37,14 @@
             <a href="/home" class="nav-link text-light">Home</a>
           </li>
           <li class="nav-item">
-            <a href="/home" class="nav-link text-light">My posts</a>
+            <a href="/home" class="nav-link text-light" onclick="getUserPosts('<%= locals.token %>')">My posts</a>
           </li>
           <li class="nav-item">
-             <button type="button"  class="nav-link text-light" data-bs-toggle="modal" data-bs-target="#createPost">
+            <a href="/create-post" class="nav-link text-light">Create post</a>
+             <!-- <button type="button"  class="nav-link text-light" data-bs-toggle="modal" data-bs-target="#createPost">
  Create post
-</button>
+</button> -->
+
           </li>
            <li class="nav-item"></li>
             <a href="/" class="nav-link text-light">Signup</a>
@@ -61,7 +64,7 @@
 
 
 <!-- Modal -->
-<div class="modal fade" id="createPost" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<!-- <div class="modal fade" id="createPost" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
@@ -69,28 +72,25 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body p-3">
-        <!-- <h1>outside modal body</h1> -->
-        <form action="/posts" method="post">
-          <!-- <h1>inside form tag</h1> -->
+        <form action="/post" method="post" enctype="multipart/form-data">
           <div class="form-group mb-2">
-            <label for="" class="form-label">Caption</label><br>
-            <input type="text" class="form-input">
+            <label for="caption" class="form-label">Caption</label><br>
+            <input type="text" class="form-input" name="caption">
           </div>
           <div class="form-group mb-2">
-            <label for=""class="form-label">Post Image</label><br>
-            <input type="file" class="form-input" accept="*">
+            <label for="image"class="form-label">Post Image</label><br>
+            <input type="file" class="form-input" accept="*" name="imageUrl">
           </div>
           
+          <button  type="submit" class="btn btn-primary " >Post</button>
         </form>
       </div>
       <div class="modal-footer">
-        <button class="btn btn-primary ">Post</button>
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
       </div>
     </div>
   </div>
-</div>
+</div> -->
     </div>
 
     <script
@@ -98,5 +98,6 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+  <script src="/script.js" ></script>
   </body>
 </html>

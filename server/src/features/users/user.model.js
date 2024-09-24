@@ -2,8 +2,8 @@ let users = [
   {
     id: 1,
     name: "Mayank",
-    email: "mayank@gmail.com",
-    password: "abc",
+    email: "ymayank501@gmail.com",
+    password: 1,
   },
   {
     id: 2,
